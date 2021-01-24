@@ -32,6 +32,10 @@ repositories {
         name = "CraftTweaker"
         url = "https://maven.blamejared.com"
     }
+    maven {
+        name = "Progwml6 maven (JEI)"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
 }
 
 minecraft {
@@ -52,7 +56,8 @@ minecraft {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    compile fg.deobf("com.blamejared.crafttweaker:CraftTweaker-${minecraft_version}:${crafttweaker_version}")
+    compile fg.deobf("com.blamejared.crafttweaker:CraftTweaker-1.16.5:${crafttweaker_version}")
+    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}")
 }
 
 jar {

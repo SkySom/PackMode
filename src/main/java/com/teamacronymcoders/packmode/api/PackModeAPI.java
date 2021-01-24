@@ -7,7 +7,9 @@ public abstract class PackModeAPI {
     private static PackModeAPI instance;
 
     public static PackModeAPI getInstance() {
-        return Objects.requireNonNull(instance, "PackMode API not created yet!");
+        return instance;
+        //TODO why this one?!?
+        //Objects.requireNonNull(instance, "PackMode API not created yet!");
     }
 
     public static void setInstance(PackModeAPI packModeAPI) {
